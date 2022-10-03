@@ -1,0 +1,15 @@
+html{
+  height: 100%;
+  & body {
+    height: 100%;
+    & #__next {
+      height: 100%;
+      & #body {
+        height: 100%;
+        & .site-layout-sub-header-background{
+          color: #fff;
+        }
+      }
+    }
+  }
+}
