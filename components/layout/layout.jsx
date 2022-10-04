@@ -5,10 +5,11 @@ import {
   VideoCameraOutlined,
 } from '@ant-design/icons';
 import React from 'react';
-import { router } from 'next/client';
+import { useRouter } from 'next/router';
 
 const MenuLayout = ({ children }) => {
-  const { url } = router.query;
+  const router = useRouter();
+  console.log(router);
   const { Header, Sider, Footer, Content } = Layout;
   return (
     <Layout theme="dark" id="body">
@@ -43,7 +44,7 @@ const MenuLayout = ({ children }) => {
             style={{
               color: '#fff',
             }}>
-            {url}
+            Next.js
           </h2>
         </Header>
         <Content
