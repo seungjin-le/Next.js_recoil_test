@@ -18,7 +18,7 @@ const MenuLayout = ({ children }) => {
     <Layout theme="dark" id="body">
       <Layout>
         <PageHeader />
-        {/*<PageSider />*/}
+        <PageSider />
         <Content
           style={{
             margin: '24px 16px 0',
