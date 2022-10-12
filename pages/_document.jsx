@@ -1,18 +1,21 @@
 import React from 'react';
-import { Html, Main, NextScript } from 'next/document';
-import Head from 'next/head';
+import { Html, Head, Main, NextScript } from 'next/document';
+import Script from 'next/script';
 
-export default function Document() {
+const Document = () => {
   return (
-    <Html lang="en">
+    <Html lang="ko">
       <Head />
       <body>
-        <NextScript
-          type="text/javascript"
-          src="//dapi.kakao.com/v2/maps/sdk.js?appkey=916ced9befd4ecf22b601f586949912d&libraries=services,clusterer"
-        />
         <Main />
+        <NextScript />
+        <script
+          type="text/javascript"
+          src={`//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env['KAKAO_MAPS_API_KEY']}&libraries=services,clusterer?autoload=false`}
+          strategy="beforeInteractive"
+        />
       </body>
     </Html>
   );
-}
+};
+export default Document;
