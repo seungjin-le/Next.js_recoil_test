@@ -8,13 +8,14 @@ import {
 import Sider from 'antd/lib/layout/Sider';
 
 const PageSider = () => {
+  let link = ['Kakao', 'redux', 'redux', 'redux'];
   return (
-    <Sider breakpoint="lg" collapsedWidth="0">
+    <Sider breakpoint="lg" collapsedWidth="0" collapsible>
       <div className="logo" />
       <Menu
         theme="dark"
         mode="inline"
-        defaultSelectedKeys={['4']}
+        defaultSelectedKeys={['1']}
         style={{
           paddingTop: 20,
         }}
@@ -26,7 +27,7 @@ const PageSider = () => {
         ].map((icon, index) => ({
           key: String(index + 1),
           icon: React.createElement(icon),
-          label: `Next.js ${index + 1}`,
+          label: link[index],
         }))}
       />
     </Sider>

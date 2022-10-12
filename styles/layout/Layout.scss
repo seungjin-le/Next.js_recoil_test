@@ -6,6 +6,8 @@ html{
       height: 100%;
       & #body {
         height: 100%;
+        display: flex;
+        flex-direction: row;
         & .site-layout-sub-header-background{
           color: #fff;
         }

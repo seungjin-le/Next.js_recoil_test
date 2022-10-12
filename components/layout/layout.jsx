@@ -9,17 +9,19 @@ import { useRouter } from 'next/router';
 import PageHeader from './pageHeader';
 import PageFooter from './pageFooter';
 import PageSider from './pageSider';
+import { Header } from 'antd/lib/layout/layout';
 
 const MenuLayout = ({ children }) => {
   const router = useRouter();
   console.log(router);
   const { Content } = Layout;
   return (
-    <Layout theme="dark" id="body">
-      <Layout>
-        <PageHeader />
-        <PageSider />
+    <Layout id="body">
+      <PageSider />
+      <Layout className="site-layout">
+        <PageHeader className="site-layout-background" />
         <Content
+          className="site-layout-background"
           style={{
             margin: '24px 16px 0',
           }}>
